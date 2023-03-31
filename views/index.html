@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
 
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div id="container">
@@ -30,11 +30,26 @@
             <div>Sábado</div>
         </div>
 
-        <div id="calendar">
-            
+        <div id="calendar"></div>
+
+        <div id="newEventModal">
+            <h2>Reservar</h2>
+
+            <form action="/events/save" method="post">
+                <select name="inputType" id="eventTitleInput">
+                    <option value="Reservado">Reserva</option>
+                    <option value="Interessado">Interesse</option>
+                </select>
+                <input type="hidden" name="date" id="date">
+
+                <button id="saveButton">Salvar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </form>
         </div>
+
+        <div id="modalBackDrop"></div>
     </div>
 </body>
 
-<script src="../public/js/script.js"></script>
+<script src="/js/script.js"></script>
 </html>
